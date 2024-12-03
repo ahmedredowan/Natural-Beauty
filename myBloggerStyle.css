@@ -1,0 +1,480 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	box-sizing: border-box;
+}
+/*------------globar variable-------------*/
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+hr{
+	margin: 20px 0;
+}
+main{
+	margin: 0 auto;
+}
+
+/*-----------create variabel-----------*/
+:root{
+	--calibri:Calibri;
+	--oldEnglish:Old English Text MT;
+	--agency:Agency FB;
+	--bahns:Bahnschrift Condensed;
+	--algerian:Algerian;
+	--bodoni:Bodoni MT Black;
+	--comic:Comic Sans MS;
+	--rush:Brush Script MT;
+
+}
+
+/*=========nav=========*/
+
+.navigation-bar .navi-link{
+	text-align: center;
+	background-color: black;
+	padding: 5px 0;
+}
+.navigation-bar .navi-link ul li{
+	display: inline-block;
+}
+.navigation-bar .navi-link ul li a{
+	padding: 15px 15px;
+	color: white;
+	text-decoration: none;
+}
+.navigation-bar .navi-link ul li a:hover{
+	background-color: slategray;
+}
+.navigation-bar .navi-icon{
+	text-align: right;
+	background: transparent;
+	position: relative;
+	z-index: 1;
+}
+.navigation-bar .navi-icon i{
+	top: 30px;
+	right: 30px;
+	position: absolute;
+	color: red;
+	font-size: 25px;
+	/* position: fixed;	 */
+	z-index: 1;
+}
+.navigation-bar .navi-icon #menuId,
+.navigation-bar .navi-icon #crossId{
+	display: none;
+}
+
+
+
+
+@media (max-width:768px) {
+	.navigation-bar .navi-link{
+		text-align: left;
+		display: none;
+		transition: 1s;
+	}
+	.navigation-bar .navi-link ul li{
+		display: grid;
+		padding: 0;
+	}
+	.navigation-bar .navi-link ul li a{
+		padding: 5px 20px;
+	}
+	.navigation-bar .navi-icon #menuId{
+		display: block;
+		transition: 1s;
+	}
+}
+
+/*--------√----Main Content-----√----------*/
+
+/*------------main screen-----------*/
+.display{
+	background: url(./NaturePlants.jpg);
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	position: relative;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+}
+.displayTitle{
+	margin: 10% 0;
+	text-align: center;
+	font-family: Bodoni MT Black;
+}
+.displayTitle h1{
+	font-size: 35px;
+	color: white;
+	padding: 10px;
+}
+.displayTitle h3{
+	font-size: 25px;
+	color: white;
+}
+.displayTitle button{
+	font-size: 20px;
+	margin-top: 10px;
+	padding: 3px 5px;
+	border-radius: 30px;
+	outline: none;
+	background: red;
+	color: white;
+	font-weight: bold;
+}
+.displayTitle button:hover{
+	background: transparent;
+	color: red;
+	cursor: pointer;
+}
+
+
+/*---------carousal slider-----------*/
+.carouselSlider{
+	width: 100%;
+	height: 400px;
+
+	margin-top: 30px;
+}
+.carouselSlider .item{
+	border:1px solid rgba(0,0,0,0.1);
+}
+.carouselImg{
+	width: 300px;
+	height: 200px;
+	cursor: pointer;
+}
+.carouselText{
+	text-align: center;
+	font-family: Calibri;
+	cursor: pointer;
+}
+.carouselText h2{
+	font-size: 20px;
+}
+.carouselText button{
+	border-radius: 20px;
+	border-style: none;
+	padding: 3px 10px;
+	cursor: pointer;
+}
+/*------------site content----leftBlog-----*/
+.siteContent{
+	display: grid;
+	grid-template-columns: 65% 35%;
+	margin:0 20px;
+}
+.imageCont{
+	overflow:hidden;
+}
+.imageCont img{
+	width: 100%;
+	height: auto;
+	transition: 1s;
+	cursor: pointer;
+	overflow: hidden;
+}
+.img-area{
+	max-height: 500px;
+	overflow: hidden;
+}
+.imageCont img:hover{
+	transform: scale(1.3);
+}
+.imageCont .imgInfo{
+	background: gainsboro;
+	padding: 5px;
+	width: 50%;
+	text-align: center;
+	margin: auto;
+}
+.leftBlogContent .postCont{
+	margin-top: 20px;
+}
+.leftBlogContent .postCont a{
+	font-size: 25px;
+	font-weight: bold;
+	font-family: calibri;
+}
+.leftBlogContent .postCont button{
+	background: gainsboro ;
+	border-radius: 30px;
+	padding: 4px 12px;
+	cursor: pointer;
+	margin-top: 5px;
+	border: none;
+	outline: none;
+}
+.leftBlogContent .postCont button:hover{
+	background: orange;
+	color: white;
+}
+.paginition{
+	justify-content: center;
+	display: flex;
+	font-family: Calibri;
+	font-weight: normal;
+}
+.paginition .pageNumber a{
+	padding: 5px 8px;
+	border-radius: 50%;
+	background: gainsboro ;
+}
+/*------------site content----rightBlog-----*/
+.rightBlogContent{
+	margin-left: 30px;
+}
+.rightBlogContent .rbCategory .ctItem{
+	padding: 10px 20px;
+}
+
+.rightBlogContent .rbCategory .ctItem ul li{
+	margin: 10px 0;
+	background: lightblue;
+	font-size: 20px;
+	font-family: Calibri;
+	width: 70%;
+	padding: 5px 20px;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 20px;
+}
+.rightBlogContent .rbCategory .ctItem ul li a:hover{
+	color: white;
+}
+.popularPost,.newsLater,.popularTag{
+	margin-top: 100px;
+	margin-left: 30px;
+	margin-right: 50px;
+	margin-left: 30px;
+}
+.popularPost h2{
+	padding: 20px 0;
+}
+.popularPost .imageCont img{
+	transition: 0.5s;
+}
+.popularPost .postCont{
+	padding: 10px 0;
+	font-family: Agency FB;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+.newsLater .inputGroup{
+	margin-top: 20px;
+}
+.newsLater .inputGroup input{
+	padding: 5px;
+	font-size: 15px;
+	width: 60%;
+}
+.newsLater .inputGroup button{
+	padding: 5px;
+	font-size: 15px;
+	background: lightblue;
+	margin: 10px 0;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+}
+.newsLater .inputGroup input:hover{
+	border:2px solid orange;
+}
+.newsLater .inputGroup button:hover{
+	background: blue;
+	color: white;
+}
+.popularTag .tag{
+	margin-top: 10px;
+}
+.popularTag .tag a{
+	display: inline-flex;
+	background: orange;
+	margin: 3px 5px;
+	padding: 5px 12px;
+	border-radius: 20px;
+	text-decoration: none;
+}
+/*--------×----Main Content-----×----------*/
+/*----------------Footer--------------*/
+footer{
+	height: auto;
+	background: black;
+	color: silver;
+	margin-top: 100px;
+}
+.footerContainer{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	text-align: center;
+	padding: 10px;
+}
+.footerContainer h2{
+	font-family: Agency FB;
+	margin-bottom: 10px;
+}
+.footerContainer p{
+	color: lightslategray;
+}
+.footerNewsLater input,button{
+	padding: 5px;
+	margin-top: 5px;
+}
+.instImage img{
+	display: inline-flex;
+	width: 25%;
+	height: 50%;
+	padding: 5px;
+}
+.footerFollowUs .slLink i{
+	margin: 10px 5px;
+}
+.footerFollowUs .slLink i:hover{
+	color: white;
+}
+.moveUp i{
+	color: lightslategray;
+	right: 5%;
+	position: absolute;
+	font-size: 30px;
+	margin-top: -20px;
+	cursor: pointer;
+}
+.moveUp i:hover{
+	color: white;
+}
+.copyRightText{
+	text-align: center;
+	color: yellow;
+	margin: 10px 0;
+}
+.copyRightText a{
+	color:red;
+}
+.copyRightText a:hover{
+	color: blue;
+}
+.extraSpace{
+	width: 100%;
+	height: 20px;
+}
+
+/*---------x-------Footer-----x---------*/
+/*-----------media queary----------*/
+
+	@media only screen and (max-width: 1000px){
+		.imageCont .imgInfo{
+			width: 70%;
+		}
+		.siteContent h2{
+			font-size: 20px;
+		}
+		.popularPost,.newsLater,.popularTag{
+			margin-top: 100px;
+			margin-left: 5px;
+			margin-right: 10px;
+		}
+		.rightBlogContent .popularPost .postCont {
+			font-size: 15px;
+			padding: 2px 0;
+			font-family: Calibri;
+		}	
+		.footerNewsLater input,button{
+			padding: 2px;
+			display: inline-block;
+		}
+	}
+	@media only screen and (max-width: 700px){
+		.siteContent{
+			display: grid;
+			grid-template-columns: 100%;
+		}
+		.imageCont .imgInfo{
+			width: 80%;
+		}
+		.rightBlogContent .rbCategory{
+			margin-top: 50px;
+		}
+		.footerContainer{
+			grid-template-columns: 50% 50%;
+		}
+		.footerContainer div{
+			margin: 5px;
+		}
+	}
+
+	@media only screen and (max-width: 550px){
+		.navBar{
+			background: black;
+			height: auto;
+		}
+		.navBar,.nav-menue ul{
+			display: flex;
+			flex-direction: column;
+		}
+		.nav-menue,.nav-icon{
+			display: none;
+		}
+		.toggle_collapse{
+			display: block;
+		}
+		.displayTitleBg h1{
+			font-size: 25px;
+		}
+		.displayTitleBg h3{
+			font-size: 20px;
+		}
+		.displayTitleBg button{
+			font-size: 15px;
+			margin-top: 0px;
+			padding: 1px 2px;
+			font-weight: bold;
+		}
+
+		.leftBlogContent .postCont{
+			margin-top: 5px;
+		}
+		.leftBlogContent .postCont a{
+			font-size: 17px;
+		}
+		.imageCont .imgInfo{
+			width: 100%;
+		}
+		.rightBlogContent{
+			margin-left: 1px;
+		}
+		.rightBlogContent .rbCategory .ctItem{
+			padding: 1px 2px;
+		}
+		.rbCategory .ctItem ul li a,
+		.rbCategory .ctItem ul li span{
+			font-size: 15px;
+		}
+		.popularPost,.newsLater,.popularTag{
+			margin-top: 50px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.footerContainer{
+			grid-template-columns: 100%;
+		}
+		
+	}
+
+
+
+
+
+
+	.my-btn{
+		padding: 4px 12px;
+		background-color: orange;
+	}	
